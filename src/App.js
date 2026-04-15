@@ -154,22 +154,22 @@ export default function App() {
   const TopicGameComponent = TOPIC_REGISTRY[topic].component;
 
   return (
-    <div className="h-screen bg-slate-100 p-2 md:p-6 font-sans flex flex-col items-center text-slate-900 overflow-hidden">
-      <div className="w-full max-w-4xl flex justify-between items-center bg-white p-3 md:p-4 rounded-2xl shadow-sm mb-3 border border-slate-200 shrink-0">
-        <div className="text-sky-600 font-bold text-base md:text-lg">
+    <div className="h-screen bg-slate-100 p-2 md:p-6 lg:p-8 font-sans flex flex-col items-center text-slate-900 overflow-hidden">
+      <div className="w-full max-w-5xl flex justify-between items-center bg-white p-3 md:p-5 rounded-3xl shadow-sm mb-4 border border-slate-200 shrink-0">
+        <div className="text-sky-600 font-bold text-base md:text-xl">
           Round {puzzleNumber} / {totalRounds}
         </div>
-        <div className="text-amber-500 font-black text-xl md:text-2xl">
+        <div className="text-amber-500 font-black text-xl md:text-3xl">
           Score: {score}
         </div>
       </div>
 
-      <div className="w-full max-w-4xl mb-4 shrink-0 px-1">
-        <div className="flex justify-between text-[10px] md:text-xs font-bold text-slate-500 mb-1">
+      <div className="w-full max-w-5xl mb-6 shrink-0 px-2">
+        <div className="flex justify-between text-[10px] md:text-sm font-bold text-slate-500 mb-2">
           <span>Time Remaining</span>
-          <span className={timeLeft <= 5 ? "text-rose-500 animate-pulse font-black" : ""}>{timeLeft}s</span>
+          <span className={timeLeft <= 5 ? "text-rose-500 animate-pulse font-black text-base" : "text-base text-slate-700"}>{timeLeft}s</span>
         </div>
-        <div className="w-full bg-slate-200 rounded-full h-2 md:h-3 overflow-hidden shadow-inner">
+        <div className="w-full bg-slate-200 rounded-full h-2 md:h-4 overflow-hidden shadow-inner">
           <div 
             className={`h-full transition-all duration-1000 ease-linear ${timeLeft <= 5 ? 'bg-rose-500' : 'bg-emerald-400'}`} 
             style={{ width: `${(timeLeft / getTimeLimit()) * 100}%` }}
@@ -177,7 +177,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="w-full max-w-4xl flex-1 flex flex-col items-center justify-center overflow-y-auto min-h-0 pb-4">
+      <div className="w-full max-w-5xl flex-1 flex flex-col items-center justify-center overflow-y-auto min-h-0 pb-6 custom-scrollbar px-2">
         <TopicGameComponent 
           currentPuzzle={currentPuzzle}
           feedback={feedback}

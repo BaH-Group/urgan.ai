@@ -16,7 +16,7 @@ export const StartScreen = ({
 
   return (
     <div className="h-screen bg-slate-100 p-4 flex items-center justify-center font-sans text-slate-900 overflow-hidden">
-      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl max-w-lg w-full max-h-[95vh] overflow-y-auto custom-scrollbar">
+      <div className="bg-white p-6 md:p-10 rounded-3xl shadow-xl max-w-2xl w-full max-h-[95vh] overflow-y-auto custom-scrollbar">
         <div className="text-center mb-8">
           <div className="text-6xl mb-4">{selectedTopicData.icon}</div>
           <h1 className="text-4xl font-extrabold text-sky-600">{selectedTopicData.label} Challenge</h1>
